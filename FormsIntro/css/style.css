@@ -1,0 +1,84 @@
+.container{
+    width:760px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:20px;
+    margin-top:50px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+body{
+    background: url("../img/ignasi_pattern_s.png");
+}
+
+h1{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.txt-field,
+.select-field{
+    display: block;
+}
+
+.lbl{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn{
+    margin-top:15px;
+    padding: 5px 15px;
+    background: #2671c1; /* #6e97c3 */
+    color: #fff;
+    border: 1px solid #265f9c;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    margin-top:15px;
+    padding: 5px 15px;
+    background: #06084b;
+    color: #fff;
+    border: 1px solid #265f9c;
+    
+    
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.select-field{
+    padding: 5px 15px;
+}
+
+
+#message{
+    width:100% !important;
+}
+
+.form-line{
+    margin-bottom: 15px;
+}
+
+.txt-field{
+    padding:5px 10px;
+    background:#fff;
+    border:1px solid #ddd;
+}
+
+.txt-field:focus{
+    background:#b8f3c5;
+    border:1px solid #2de956;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+

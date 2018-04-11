@@ -1,0 +1,17 @@
+.peopleTable, .peopleTable td, .peopleTable th{
+    border:1px solid #000;
+    border-collapse: collapse;    
+}
+
+.peopleTable{
+    width: 500px;
+}
+
+.peopleTable th{
+    background: rgb(97, 177, 165);
+    text-align: left;
+}
+
+.blueLine td {
+    background: rgb(230, 250, 247);
+}

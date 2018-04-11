@@ -1,0 +1,35 @@
+body{
+    background-image: url("fonas.png");
+}
+
+.greenText {
+    color:green;
+}
+
+.orangeText {
+    color:orange;
+}
+
+.firstParagraph{
+    font-size: 14px;    
+}
+
+.secondParagraph{
+    font-size: 31px;
+}
+
+/* Cia yra CSS komentaras */
+.photo{
+    width:400px;
+}
+
+.boldText{
+    font-weight: bold;
+}
+
+.table, .table td{
+    border:3px solid #003cff;
+    border-collapse: collapse;
+    background-color:#cce1e2;
+}
+

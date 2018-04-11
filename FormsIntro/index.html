@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms Intro</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Anketa</h1>
+
+        <form>
+            <div class="form-line">
+                <label for="firstname" class="lbl">Vardas</label>
+                <input type="text" name="firstname" id="firstname" class="txt-field" placeholder="Enter your name..." />
+            </div>
+
+
+            <div class="form-line">
+                <label for="lastname" class="lbl">Pavarde</label>
+                <input type="text" name="lastname" id="lastname" class="txt-field" placeholder="Enter your surname..." />
+            </div>
+
+            <div class="form-line">
+                <label for="password" class="lbl">Password</label>
+                <input type="password" name="password" id="password" class="txt-field" placeholder="Enter your password..." />
+            </div>
+
+            <div class="form-line">
+                <label for="age" class="lbl">Amžius</label>
+                <input type="text" name="age" id="age" class="txt-field" placeholder="Enter your age..." />
+            </div>
+
+            <div class="form-line">
+                <label for="city" class="lbl">Miestas</label>
+                <input type="text" name="city" id="city" class="txt-field" placeholder="Enter your city..." />
+            </div>
+
+            <div class="form-line">
+                <label for="country" class="lbl">Šalis</label>
+                <select class="select-field" id="country" name="country">
+                    <option value="LT">Lithuania</option>
+                    <option value="DE">Germany</option>
+                    <option value="LV">Latvia</option>
+                    <option value="EE">Estonia</option>
+                    <option value="RU">Russia</option>
+                    <option value="DK">Denmark</option>
+                    <option value="PL">Poland</option>
+                </select>
+            </div>
+
+            <div class="form-line">
+                <input type="radio" id="r1" name="gender" value="M">
+                <label for="r1">Male</label>
+                <input type="radio" id="r2" name="gender" value="F">
+                <label for="r2">Female</label>
+            </div>
+
+            <div class="form-line">
+                <input type="checkbox" id="remember_me" name="remember_me" value="true">
+                <label for="remember_me">Remember this browser?</label>
+            </div>
+
+            <div class="form-line">
+                <input type="checkbox" id="d1" name="weekday" value="Monday">
+                <label for="d1">Monday</label>
+                <input type="checkbox" id="d2" name="weekday" value="Tuesday">
+                <label for="d2">Tuesday</label>
+                <input type="checkbox" id="d3" name="weekday" value="Wednesday">
+                <label for="d3">Wednesday</label>
+            </div>
+
+            <div class="form-line">
+                <textarea name="message" id="message">
+                </textarea>
+            </div>
+
+            <div>
+                <input type="color" name="color_input" id="color_input" />
+            </div>
+
+
+
+            <button type="button" class="btn">
+                <i class="far fa-envelope"></i> Siusti
+            </button>
+        </form>
+    </div>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
