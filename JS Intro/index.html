@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Intro</title>
+
+    <script>
+        function test(){
+            let x = document.getElementById("price").value; // nuskaitom laukelio reiksme.
+            let y = Number(x); // y = paverciam X i numberi
+            console.log(typeof x);// patikrinam laukelio "Duomenu tipa"!
+
+            y = y + 100; // pridedam + 100 prie numerio 100;
+            console.log(y);  
+            document.getElementById("result").innerText = y;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" class="price" name="price" id="price" />
+    <button type="button" id="test" onclick="test()">Test</button> <span>=</span>
+    <span id="result"></span>
+</body>
+</html>

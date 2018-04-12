@@ -1,0 +1,27 @@
+body{
+	background:url('../img/hip-square.png');
+}
+
+.container-position{
+	padding-top:50px;	
+	padding-bottom: 50px;
+}
+
+.formwrapper{
+	background:#fff;
+	padding:15px;
+	min-height: 150px;
+}
+
+.fullwidth{
+	width:100%;
+}
+
+.form-check-input{
+	margin-right:10px;
+}
+
+.formwrapper h2{
+	text-align: center;
+}
+
