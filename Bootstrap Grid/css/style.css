@@ -1,0 +1,21 @@
+body{
+    background:url("../img/hip-square.png");
+}
+
+.content{
+    background: #fff;
+    min-height:150px;
+    padding:20px;
+}
+
+.content h2{
+    text-align: center;
+}
+
+#main{
+    padding-top:100px;
+}
+
+.tarpelis{
+    height:30px;
+}
