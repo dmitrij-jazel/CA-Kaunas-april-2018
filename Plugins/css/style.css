@@ -46,3 +46,24 @@ h1{
 .bottommargin{
     margin-bottom: 30px;
 }
+
+.flex-container{
+    display: flex;
+    padding-top:15px;
+}
+
+.flex-container div{
+    width:50%;
+}
+
+.for_btn{
+    text-align: right;
+}
+
+.for_checkbox{
+    padding-top:9px;
+}
+
+.userImg{
+    border-radius: 50%;
+}

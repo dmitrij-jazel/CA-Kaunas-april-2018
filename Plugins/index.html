@@ -19,10 +19,25 @@
         }else{
             document.getElementById("txtrez").innerText = "zodis netoks";
         }
+    }
 
+    function login(){
+        let username = document.getElementById("user").value; // Vartotojas is Login
+        let password = document.getElementById("pass").value; // Slaptazodis is Login
 
+        let u_from_server = "frank"; // vartotojo vardas (IS DUOMBAZES)
+        let p_from_server = "test123"; // slaptazodis (IS DUOMBAZES)
 
-        
+        if(username == u_from_server){            
+            if(password == p_from_server){
+                alert("welcome Frank!");
+            }else{
+                alert("wrong password");
+            }
+        }else{
+            alert("wrong user");
+        }
+
     }
     
     </script>
@@ -68,8 +83,32 @@
                 
                 <div class="col-12 col-md-4">
                     <div class="content">
-                        <h1>Login</h1>
-                        
+                        <div class="text-center">
+                            <h1>Login</h1>
+                            <div>
+                                <img src="img/nouser.jpg" alt="" class="userImg">
+                            </div>
+                        </div>
+                        <div class="form-group">    
+                            <label for="text1">Username</label>                        
+                            <input type="text" class="form-control" name="text" id="user">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text2">Password</label>
+                            <input type="password" class="form-control" name="text" id="pass">
+                        </div>
+                        <div class="forgotPassword">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="flex-container">
+                            <div class="for_checkbox">
+                                <input type="checkbox" id="remember_me" ><label for="remember_me">Remember me?</label>
+                            </div>
+                            <div class="for_btn">
+                                <button class="btn btn-primary" id="btn_login" onclick="login()">Login</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
