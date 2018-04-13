@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+
+    <script>
+    
+    function rez(){
+        let x = document.getElementById("text1").value;
+        let y = document.getElementById("text2").value;
+        if(x == y){
+            document.getElementById("txtrez").innerText = "zodis toks";
+        }else{
+            document.getElementById("txtrez").innerText = "zodis netoks";
+        }
+
+
+
+        
+    }
+    
+    </script>
+
+
+
+</head>
+<body >
+
+    <section class="s1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 bottommargin">
+                    <div class="top content" id="word_compare">
+                        
+                        <div class="form-group">    
+                            <label for="text1">text1</label>                        
+                            <input type="text" class="form-control" name="text" id="text1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text2">text2</label>
+                            <input type="text" class="form-control" name="text" id="text2">
+                        </div>
+                        <div class="forgotPassword">
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                        <div class="centered-content">
+
+                            <div class="form-group" >
+                                <button type="button" id="rez" onclick="rez()" class="btn btn-primary">Palyginti</button>
+                            </div>
+
+                            <div class="form-group">
+                                <h1 id="txtrez"></h1>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-4">
+                    <div class="content">
+                        <h1>Login</h1>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

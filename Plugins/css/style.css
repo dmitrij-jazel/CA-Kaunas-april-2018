@@ -1,0 +1,48 @@
+body{
+    background: url(../img/footer_lodyas.png);
+}
+.s1{
+    margin-top: 50px;
+}
+
+.eil{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text{
+    background: rgb(245, 245, 245);
+
+}
+h1{
+    color: rgb(61, 61, 61);
+    font-family: 'Cute Font', cursive;
+
+}
+.btn :hover{
+    background: darkgray;
+}
+
+.form-control{
+    outline: none !important;
+}
+
+.centered-content{
+    text-align: center;
+}
+
+.content{
+    background:#fff;
+    min-height:100px;
+    padding:15px;
+    border:1px solid #ddd;
+}
+
+.forgotPassword{
+    text-align: right;
+}
+
+.bottommargin{
+    margin-bottom: 30px;
+}
