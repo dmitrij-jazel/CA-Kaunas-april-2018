@@ -1,0 +1,18 @@
+#top{
+    padding-top:100px;
+}
+
+body{
+    background:#333;
+}
+
+#app{
+    background: #fff;
+    border-radius: 5px;
+
+    padding:20px;
+}
+
+.tarpelis{
+    height: 20px;
+}
