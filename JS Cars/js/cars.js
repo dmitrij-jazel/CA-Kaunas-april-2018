@@ -1,5 +1,27 @@
 let CARS = [];
 
+// istraukiam issaugotas masinas is LocalStorage
+let cars_list_string = localStorage.getItem("CARS");
+console.log(cars_list_string);
+
+//atgaunam Isaugotu masinu masiva.
+let CARS_stored = JSON.parse(cars_list_string);
+console.log(CARS_stored);
+
+if(CARS_stored != null){
+
+    for(let i = 0; i < CARS_stored.length; i++){
+        //CARS_stored[i].print();
+        say_hi(CARS_stored[i]);
+    }
+
+    CARS = CARS_stored;
+}
+
+
+
+
+
 function reg(){
     
     let brand_text = document.getElementById("brand").value;
@@ -21,12 +43,21 @@ function reg(){
         
         //Car methods
         print: function() {
-            console.log("Masina pasisveikino!");
+            console.log(this.brand + " " + this.model + " pasisveikino!");
         }
     }
 
     CARS.push(car);
     
     console.log(CARS);
+
+    //Paruosiam CARS masiva saugojimui (paverciam i string)
+    let CARS_string = JSON.stringify(CARS);
+    //
+    localStorage.setItem("CARS", CARS_string);    
+}
+
+function say_hi(c) {
+    console.log(c.brand + " " + c.model + " pasisveikino!");
 }
 
