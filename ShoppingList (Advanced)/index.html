@@ -22,13 +22,13 @@
                                 <label for="prod">Produktas</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="prod" id="prod" class="form-control">
+                                <input type="text" name="prod" id="prod" class="form-control" placeholder="prod" onkeyup="releaseButton()">
                             </div>
                         </div>
                         
                         <div class="tarpelis"></div>
 
-                        <button class="btn btn-primary" type="submit" onclick="add()" placeholder="prod">Prideti produkta</button>
+                        <button class="btn btn-primary" type="submit" onclick="add()" id="btn_add" disabled >Prideti produkta</button>
                     </div>
                     <div class="col-6">
                         <div id="result">

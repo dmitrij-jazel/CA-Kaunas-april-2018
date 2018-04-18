@@ -12,6 +12,7 @@ if(stored_products != null){
 printProducts(product_array);
 
 function add(){
+    
     //nuskaityti reiksme nuo laukelio
     let newProduct = document.getElementById("prod").value;
 
@@ -32,6 +33,9 @@ function add(){
     // issaugot shopping lista
     let product_array_as_string = JSON.stringify(product_array);
     localStorage.setItem("PRODUCTS", product_array_as_string);
+
+    //patikrinti ar leidziama mygtukui atsigaut
+
 }
 
 function printProducts(product_array){
@@ -56,4 +60,9 @@ function checkForDuplicates(newProduct, product_array){
     }
 
     return found;
+}
+
+
+function releaseButton(){
+    document.getElementById("btn_add").disabled = false;
 }
