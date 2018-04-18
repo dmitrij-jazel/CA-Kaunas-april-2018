@@ -13,10 +13,16 @@ function reg(){
     let hp_number = Number(hp_text);
 
     let car = {
+        //Car properties
         brand: brand_text,
         model: model_text,
         engine: engine_number,
-        hp: hp_number
+        hp: hp_number,
+        
+        //Car methods
+        print: function() {
+            console.log("Masina pasisveikino!");
+        }
     }
 
     CARS.push(car);
