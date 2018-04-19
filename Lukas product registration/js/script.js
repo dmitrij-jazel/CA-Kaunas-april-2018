@@ -49,11 +49,26 @@ function printProduktai(produktai){
 		 + "<td>" + prod.kiekis + "</td>"
 		 + "<td>" + prod.kaina + "&euro;" + "</td>"
 		 + "<td>" + prod.miestas + "</td>"
-		 + "<td>" +"<button class='btn btn-link'>[Šalinti]</button>" + "</td></tr>";
+		 + "<td>" +"<button onclick='remove("+i+")' class='btn btn-link'>[Šalinti]</button>" + "</td></tr>";
 		// console.log(p);
 	}
 	h = h + "</table>";
 	document.getElementById("spausdinti").innerHTML = h;
+}
+
+function remove(index){
+	// reikia istrinti elementa pagal Indexa.
+	//PASALINAM indexo dali
+	produktai.splice(index, 1);
+
+	//po pakeitimo, reikia is naujo atspausdint, ir is naujo issaugot
+	
+	//atspausdinam
+	printProduktai(produktai);
+
+	//issaugom i "localStorage".
+	var p_string = JSON.stringify(produktai);
+	localStorage.setItem("Prod_sarasas", p_string);
 }
 
 
