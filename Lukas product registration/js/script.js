@@ -37,6 +37,9 @@ function add(){
 	//Nera privaloma, bet mes issaugom i "localStorage".
 	var p_string = JSON.stringify(produktai);
 	localStorage.setItem("Prod_sarasas", p_string);
+
+	//Isvalyti forma
+	resetForm();
 }
 
 function printProduktai(produktai){
@@ -62,7 +65,7 @@ function remove(index){
 	produktai.splice(index, 1);
 
 	//po pakeitimo, reikia is naujo atspausdint, ir is naujo issaugot
-	
+
 	//atspausdinam
 	printProduktai(produktai);
 
@@ -71,20 +74,15 @@ function remove(index){
 	localStorage.setItem("Prod_sarasas", p_string);
 }
 
+function resetForm(){
+	document.getElementById("myForm").reset();
+}
 
-
-
-// -------------Clear-------------
-var clear = document.getElementById("sukurti");
-var form = document.getElementById("myForm");
-
-// function clearfield() {
+function clearSavedData(){
+	localStorage.removeItem("Prod_sarasas");
 	
-//     // EDIT: place code for clearing anything else that would be affected here
-//     form.reset();
-
-// }
-
-// clear.addEventListener("click", clearfield, false);
-
-// -------------Clear-------------
+	// is naujo persaugoti einama masiva
+	produktai = [];
+	//is naujo atvaizduot pasivo elementus
+	printProduktai(produktai);
+}

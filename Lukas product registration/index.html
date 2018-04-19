@@ -25,12 +25,24 @@
                     <h1>Produktų registracija</h1>
                     <div class="form-group">
                         <label for="pavadinimas">Pavadinimas</label>
-                        <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">
+                        
+                        <div class="input-group mb-9">                            
+                            <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">
+                            
+                        </div>
                     </div>
                     
+                    
+
                     <div class="form-group">
-                        <label for="kaina">Kaina</label>
-                        <input type="text" name="kaina" id="kaina" class="form-control" placeholder="Kaina">
+                        <label for="kaina">Kaina</label>                        
+                        <div class="input-group">                            
+                            <input type="text" name="kaina" id="kaina" class="form-control" placeholder="Kaina">
+                            
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon1">€</span>
+                            </div>
+                        </div>  
                     </div>
 
                     <div class="form-group">
@@ -46,7 +58,8 @@
 
                     <div class="mygtukai">
                         <button class="btn btn-success" id="sukurti" onclick="add()">Sukurti <i class="far fa-check-circle"></i></button>
-                        <button class="btn btn-link float-right" >Atšaukti</button>
+                        <button class="btn btn-alert" id="sukurti" onclick="clearSavedData()">Clear saved data <i class="fas fa-trash-alt"></i></button>
+                        <button class="btn btn-link float-right" onclick="resetForm()" >Atšaukti</button>
                     </div>
                 </form>
                 <!-- </div> -->
