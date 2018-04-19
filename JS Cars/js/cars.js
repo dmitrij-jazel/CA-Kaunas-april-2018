@@ -9,12 +9,6 @@ let CARS_stored = JSON.parse(cars_list_string);
 console.log(CARS_stored);
 
 if(CARS_stored != null){
-
-    for(let i = 0; i < CARS_stored.length; i++){
-        //CARS_stored[i].print();
-        say_hi(CARS_stored[i]);
-    }
-
     CARS = CARS_stored;
 }
 
@@ -56,6 +50,7 @@ function reg(){
     //
     localStorage.setItem("CARS", CARS_string);    
 }
+
 
 function say_hi(c) {
     console.log(c.brand + " " + c.model + " pasisveikino!");
