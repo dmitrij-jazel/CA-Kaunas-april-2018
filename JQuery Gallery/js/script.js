@@ -59,3 +59,40 @@ $("#txt_1").keyup(function () {
 
 
 
+
+
+
+
+$("#convert").click(function () {
+    let eurai = Number($("#eurai").val());
+    let kursas = 0;
+
+    let valiuta = $("#valiuta").val();
+    //alert(valiuta);
+    
+    if(valiuta == "EUR"){
+        kursas = 1;
+    }else if(valiuta == "RUB"){
+        kursas = 60;
+    }else if(valiuta == "DKK"){
+        kursas = 7.5;
+    }else if(valiuta == "USD"){
+        kursas = 1.23;
+    }else if(valiuta == "PLN"){
+        kursas = 4.15;
+    }
+
+    let resultatas = eurai * kursas;
+    $("#result").text(resultatas);
+});
+
+
+
+
+
+
+
+
+
+
+
