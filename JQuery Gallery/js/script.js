@@ -7,5 +7,20 @@
 
 //"CLICK" Event listener
 $(".btn").click(function () {
-    alert("btn was clicked");
+    $(this).text("I was clicked!");
+    $(this).fadeOut('fast').fadeIn(5000);
+});
+
+//"Hover" event listener
+$(".btn").hover(function () {
+    $(this).text("Stop hovering me!");
+}, function() { // this is "Call-back" jquery funkcija
+    $(this).text("I was hovered");
+});
+
+
+// Ivikis
+$(".result").click(function () {
+    // ivikio veiksmas
+    $(this).fadeToggle(3000);
 });
