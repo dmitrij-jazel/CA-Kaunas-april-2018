@@ -64,6 +64,9 @@ $("#txt_1").keyup(function () {
 
 
 $("#convert").click(function () {
+    let eur_1 = 1;
+    let currency_name = "";
+
     let eurai = Number($("#eurai").val());
     let kursas = 0;
 
@@ -72,18 +75,27 @@ $("#convert").click(function () {
     
     if(valiuta == "EUR"){
         kursas = 1;
+        currency_name = "European euros";
     }else if(valiuta == "RUB"){
         kursas = 60;
+        currency_name = "Russian rubbles";
     }else if(valiuta == "DKK"){
         kursas = 7.5;
+        currency_name = "Danish kronas";
     }else if(valiuta == "USD"){
         kursas = 1.23;
+        currency_name = "USA Dollars";
     }else if(valiuta == "PLN"){
         kursas = 4.15;
+        currency_name = "Polish zlots";
     }
 
     let resultatas = eurai * kursas;
+    eur_1 = eur_1 * kursas;
+
     $("#result").text(resultatas);
+    $("#eur_1").text(eur_1);
+    $("#currency_name").text(currency_name);
 });
 
 
