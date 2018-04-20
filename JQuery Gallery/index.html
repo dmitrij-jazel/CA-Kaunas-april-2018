@@ -23,15 +23,28 @@
             <!-- 1/2 width -->
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <div class="content">
-                        <button type="button" class="btn btn-primary btn-lg" >Btn1</button>
-                        <div class="result"></div>
+                    <div class="content ">
+                        <button type="button" class="btn btn-primary btn-lg specialBtn" >Btn1</button>
+                        <div class="result ">
+                            <input type="text" id="txt_1" class="form-control txt_field">
+                            <select id="car_select">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="btn_getValue_1" class="btn btn-lg">GetValue 1</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="content">
-                        <button type="button" class="btn btn-primary btn-lg">Btn2</button>
-                        <div class="result"></div>
+                    <div class="content slideEffect">
+                        <button type="button" class="btn btn-primary btn-lg specialBtn">Btn2</button>
+                        <div class="result">
+                            <input type="text" id="txt_2" class="form-control txt_field">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,21 +52,74 @@
             <!-- 1/2 width -->
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <div class="content">
-                        <button type="button" class="btn btn-primary btn-lg" >Btn3</button>
-                        <div class="result"></div>
+                    <div class="content fadeEffect">
+                        <button type="button" class="btn btn-primary btn-lg specialBtn" >Btn3</button>
+                        <div class="result">
+                            <input type="text" id="txt_3" class="form-control txt_field">
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="content">
-                        <button type="button" class="btn btn-primary btn-lg">Btn4</button>
-                        <div class="result"></div>
+                    <div class="content fadeEffect">
+                        <button type="button" class="btn btn-primary btn-lg specialBtn">Btn4</button>
+                        <div class="result">
+                            <input type="text" id="txt_4" class="form-control txt_field">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="tarpelis"></div>
 
+            </div>
+
+
+            <div>
+                <button id="getVal">Get value</button>
+
+                <div class="form-line">
+                    <label for="country" class="lbl">Šalis</label>
+                    <select class="select-field" id="country" name="country">
+                        <option value="LT">Lithuania</option>
+                        <option value="DE">Germany</option>
+                        <option value="LV">Latvia</option>
+                        <option value="EE">Estonia</option>
+                        <option value="RU">Russia</option>
+                        <option value="DK">Denmark</option>
+                        <option value="PL">Poland</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <!-- cia reikia irasyt radio input ir checkbox input -->
+                    <div class="form-line">
+                        <input type="radio" id="r1" name="gender" value="M" class="gender_select">
+                        <label for="r1">Male</label>
+                        <input type="radio" id="r2" name="gender" value="F" class="gender_select">
+                        <label for="r2">Female</label>
+                    </div>
+        
+                    <div class="form-line">
+                        <input type="checkbox" id="remember_me" name="remember_me" value="true">
+                        <label for="remember_me">Remember this browser?</label>
+                    </div>
+        
+                    <div class="form-line">
+                        <input type="checkbox" id="d1" name="weekday" value="Monday">
+                        <label for="d1">Monday</label>
+                        <input type="checkbox" id="d2" name="weekday" value="Tuesday">
+                        <label for="d2">Tuesday</label>
+                        <input type="checkbox" id="d3" name="weekday" value="Wednesday">
+                        <label for="d3">Wednesday</label>
+                    </div>
+        
+                    <div class="form-line">
+                        <textarea name="message" id="message">
+                        </textarea>
+                    </div>
+        
+        
+                </div>
             </div>
 
         </div>
