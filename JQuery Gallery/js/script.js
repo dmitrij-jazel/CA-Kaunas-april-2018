@@ -46,10 +46,16 @@ $(".fadeEffect").click(function () {
 $("#getVal").click(function () {
     let country = $("#country").val(); // istraukiam value is select boxo
     
-    let gender = $("input.gender_select:checked").val();
+    let gender = $("input.gender_select:checked").val(); // istraukiam value is radio inputo
 
-    alert(gender);
+    alert(country);
 
 });
+
+
+$("#txt_1").keyup(function () {
+    alert($(this).val());// on text box key up, alert tai kas parasyta
+});
+
 
 
