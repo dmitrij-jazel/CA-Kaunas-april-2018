@@ -70,22 +70,27 @@ function add(){
 		// patikrinti ar klaina turi "+" ARBA "-"
 		if(kiekis_input.indexOf('+') > -1 || kiekis_input.indexOf('-') > -1){
 			// rastas neleistinas "+" zenklas - klaida
-			alert("Demesio rastas + arba -");
-			errors_found = true;
+			$("#kiekis-validation-error").text("Demesio rastas + arba -");
+			$("#kiekis-validation-error").fadeIn('fast');		
+			$("#kiekis").addClass("is-invalid");
+			errors_found = true;			
 		}else{
 			if(Number(kiekis_input) > 0 && Number(kiekis_input) < 10){
 				// klaidu nerasta, viskas gerai
-				
+				$("#kiekis-validation-error").fadeOut('fast');
+				$("#kiekis").removeClass("is-invalid");
 			}else{
-				alert("Demesio, kiekis privalo buti tarp 0 - 10");
+				$("#kiekis-validation-error").text("Demesio, kiekis privalo buti tarp 0 - 10");
+				$("#kiekis-validation-error").fadeIn('fast');		
+				$("#kiekis").addClass("is-invalid");
 				errors_found = true;
 			}
 		}
-
 	}else{
-		// KLAIDA: "Kaina" laukelis yra privalomas ir negali buti tuscias
-		alert("Kaina yra provaloma");
-		errors_found = true;
+		$("#kiekis-validation-error").text("Kiekis yra privalomas");
+		$("#kiekis-validation-error").fadeIn('fast');		
+		$("#kiekis").addClass("is-invalid");
+		errors_found = true;		
 	}
 
 	// Tikrinam "Miestas" laukeli
