@@ -17,7 +17,26 @@
 <body>
 
 <section id="firstSection">
+    
     <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success alert-dismissible fade mt-3" role="alert" id="reg_ok">
+                    <strong>Valio!</strong> Registracija iviko.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade mt-3" role="alert" id="reg_error">
+                    <strong>Wops!</strong> Kazkas negerai.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-6 lentele ">
                 <!-- <div class="col-4"> -->
@@ -27,9 +46,11 @@
                         <label for="pavadinimas">Pavadinimas</label>
                         
                         <div class="input-group mb-9">                            
-                            <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">
-                            
+                            <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">                            
                         </div>
+                        <div class="invalid-feedback" id="pavadinimas-validation-error">
+                                Kaina error
+                            </div>
                     </div>
                     
                     
