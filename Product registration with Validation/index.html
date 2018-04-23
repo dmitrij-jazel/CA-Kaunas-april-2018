@@ -21,7 +21,7 @@
         <div class="row justify-content-center">
             <div class="col-6 lentele ">
                 <!-- <div class="col-4"> -->
-                <form id="myForm">
+                <form id="myForm" >
                     <h1>Produktų registracija</h1>
                     <div class="form-group">
                         <label for="pavadinimas">Pavadinimas</label>
@@ -52,16 +52,23 @@
 
                     <div class="form-group">
                         <label for="miestas">Miestas</label>
-                        <input type="text" name="miestas" id="miestas" class="form-control" placeholder="Miestas">
+                        <input type="text" name="miestas" id="miestas" class="form-control" placeholder="Miestas" required>
+                        <div class="invalid-feedback" id="city-validation-error">
+                            Prašome parašyti taisyklingą miestą.
+                        </div>
+                        
                     </div>
                     
 
                     <div class="mygtukai">
-                        <button class="btn btn-success" id="sukurti" onclick="add()" type="button">Sukurti <i class="far fa-check-circle"></i></button>
+                        <button class="btn btn-success" id="sukurti"  type="button" onclick="add()" >Sukurti <i class="far fa-check-circle"></i></button>
                         <button class="btn btn-alert" id="sukurti" onclick="clearSavedData()" type="button">Clear saved data <i class="fas fa-trash-alt"></i></button>
                         <button class="btn btn-link float-right" onclick="resetForm()" >Atšaukti</button>
                     </div>
                 </form>
+
+
+
                 <!-- </div> -->
             </div>
         </div>
@@ -75,13 +82,14 @@
 </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

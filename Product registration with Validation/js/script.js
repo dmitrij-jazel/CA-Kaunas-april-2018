@@ -30,10 +30,15 @@ function add(){
 		// patikrinti ar klaina turi "+" ARBA "-"
 		if(kaina_input.indexOf('+') > -1 || kaina_input.indexOf('-') > -1){
 			// rastas neleistinas "+" zenklas - klaida
-			alert("Demesio rastas + arba -");			
+			alert("Demesio rastas + arba -");
 			errors_found = true;
 		}else{
-			// klaidu nerasta, viskas gerai
+			if(Number(kaina_input) > 0 && Number(kaina_input) < 10000){
+				// klaidu nerasta, viskas gerai
+			}else{
+				alert("Demesio, kaina privalo buti tarp 0 - 10000");
+				errors_found = true;
+			}
 		}
 	}else{
 		// KLAIDA: "Kaina" laukelis yra privalomas ir negali buti tuscias
@@ -56,9 +61,53 @@ function add(){
 		errors_found = true;
 	}
 
+	
 
+	// Tikrinam "Kiekis" laukeli
+	if(kiekis_input){
+		// Laukelis nera tuscias
+		// viskas tvarkoi, tesiam toliau
+		// patikrinti ar klaina turi "+" ARBA "-"
+		if(kiekis_input.indexOf('+') > -1 || kiekis_input.indexOf('-') > -1){
+			// rastas neleistinas "+" zenklas - klaida
+			alert("Demesio rastas + arba -");
+			errors_found = true;
+		}else{
+			if(Number(kiekis_input) > 0 && Number(kiekis_input) < 10){
+				// klaidu nerasta, viskas gerai
+				
+			}else{
+				alert("Demesio, kiekis privalo buti tarp 0 - 10");
+				errors_found = true;
+			}
+		}
 
+	}else{
+		// KLAIDA: "Kaina" laukelis yra privalomas ir negali buti tuscias
+		alert("Kaina yra provaloma");
+		errors_found = true;
+	}
 
+	// Tikrinam "Miestas" laukeli
+	if(miestas_input){
+		// Laukelis nera tuscias
+		if(miestas_input.length > 50){
+			// cia yra klaida, perilgas produkto pavadinimas			
+			$("#city-validation-error").text("Per ilgas miesto pavadinimas.");
+			$("#city-validation-error").fadeIn('fast');		
+			$("#miestas").addClass("is-invalid");
+			errors_found = true;
+		}else{
+			$("#city-validation-error").fadeOut('fast');
+			$("#miestas").removeClass("is-invalid");
+		}
+	}else{
+		// Jeigu klaidu yra, reikia apsaugoti duomenis
+		$("#city-validation-error").text("Prašome parašyti taisyklingą miestą.");
+		$("#city-validation-error").fadeIn('fast');	
+		$("#miestas").addClass("is-invalid");
+		errors_found = true;
+	}
 
 
 	if(!errors_found){
@@ -83,8 +132,7 @@ function add(){
 		//Isvalyti forma
 		resetForm();
 	}else{
-		// Jeigu klaidu yra, reikia apsaugoti duomenis
-		alert("buvo rasta klaida, registracija neiviko.");
+		
 	}
 
 	
