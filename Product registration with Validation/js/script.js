@@ -23,7 +23,7 @@ function add(){
 
 	let errors_found = false;
 
-	// Tikrinam "Kaina laukeli"
+	// Tikrinam "Kaina" laukeli
 	if(kaina_input){
 		// Laukelis nera tuscias
 		// viskas tvarkoi, tesiam toliau
@@ -41,8 +41,20 @@ function add(){
 		errors_found = true;
 	}
 
-	
-	
+	// Tikrinam "Pavadinimas" laukeli
+	if(pavadinimas_input){
+		// Laukelis nera tuscias
+		if(pavadinimas_input.length > 50){
+			// cia yra klaida, perilgas produkto pavadinimas
+			alert("Demesio, per ilgas prekes pavadinimas");			
+			errors_found = true;
+		}else{
+			// klaidu nerasta, viskas gerai
+		}
+	}else{
+		alert("Pavadinimas yra provalomas");
+		errors_found = true;
+	}
 
 
 
