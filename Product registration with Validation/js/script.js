@@ -70,9 +70,9 @@ function add(){
 		// patikrinti ar klaina turi "+" ARBA "-"
 		if(kiekis_input.indexOf('+') > -1 || kiekis_input.indexOf('-') > -1){
 			// rastas neleistinas "+" zenklas - klaida
-			$("#kiekis-validation-error").text("Demesio rastas + arba -");
-			$("#kiekis-validation-error").fadeIn('fast');		
-			$("#kiekis").addClass("is-invalid");
+			$("#kiekis-validation-error").text("Demesio rastas + arba -"); //cia yra pranesimo zinute
+			$("#kiekis-validation-error").fadeIn('fast'); // cia mes parodom pati pranesima
+			$("#kiekis").addClass("is-invalid"); // cia mes pridedam raudona remeli teksto laukeliui
 			errors_found = true;			
 		}else{
 			if(Number(kiekis_input) > 0 && Number(kiekis_input) < 10){
