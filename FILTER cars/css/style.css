@@ -1,0 +1,38 @@
+header{
+	background:url('../img/cars_wallpaper_1.png') left;
+	padding-top:30px;
+	color:#fff;
+	padding-bottom:30px;
+}
+
+
+main{
+	padding-top:50px;
+}
+
+#app{
+	background:#fff;
+}
+
+#btn_filter{
+	margin-left:15px;
+}
+
+#markeSelect{
+	margin-left:15px;
+}
+
+.brandImg img{
+	max-width:200px;
+}
+
+.car_table{
+	
+}
+
+.separator{
+	height:1px;
+	background:#ddd;
+	margin-top:5px;
+	margin-bottom:10px;
+}
