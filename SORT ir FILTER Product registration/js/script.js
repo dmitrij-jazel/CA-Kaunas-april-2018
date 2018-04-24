@@ -86,3 +86,44 @@ function clearSavedData(){
 	//is naujo atvaizduot pasivo elementus
 	printProduktai(produktai);
 }
+
+$("#SortByName").click(function () {
+	produktai = sortByName(produktai);
+	printProduktai(produktai);
+});
+
+$("#SortByPrice").click(function () {
+	produktai = sortByPrice(produktai);
+	printProduktai(produktai);
+});
+
+$("#FilterByName").click(function () {
+	// produktai = produktai.filter(checkPrice);
+	
+	printProduktai(produktai);
+});
+
+$("#FilterByPrice").click(function () {
+	produktai = produktai.filter(function (prod) {
+		return prod.kaina >= 2;
+	});
+	printProduktai(produktai);
+});
+
+function sortByName(array){
+	array.sort(
+		function(a, b) {
+			return a.pavadinimas > b.pavadinimas; // Rusiavimas pagal Abecele
+		}
+	);
+	return array;
+}
+
+function sortByPrice(array){
+	array.sort(
+		function(a, b) {
+			return a.kaina > b.kaina; // Rusiavimas pagal kaina didejancia tvarka
+		}
+	);
+	return array;
+}

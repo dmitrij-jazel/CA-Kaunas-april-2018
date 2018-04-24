@@ -27,4 +27,13 @@ body{
 	padding-left: 0;
 }
 
+.filterLabel{
+	display: block;
+	line-height: 38px;
+}
+
+.tarpelis{
+	height:15px;
+}
+
 
