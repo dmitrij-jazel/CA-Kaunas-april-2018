@@ -88,26 +88,36 @@ function clearSavedData(){
 }
 
 $("#SortByName").click(function () {
-	produktai = sortByName(produktai);
-	printProduktai(produktai);
+	let filteredProducts = sortByName(produktai);
+	printProduktai(filteredProducts);
 });
 
 $("#SortByPrice").click(function () {
-	produktai = sortByPrice(produktai);
-	printProduktai(produktai);
+	let filteredProducts = sortByPrice(produktai);
+	printProduktai(filteredProducts);
 });
 
-$("#FilterByName").click(function () {
-	// produktai = produktai.filter(checkPrice);
-	
-	printProduktai(produktai);
+$("#FilterByCity").click(function () {
+	let filteredProducts = produktai.filter(function (prod) {
+		return prod.miestas == "Vilnius"; // Filtruojam pagal miesta
+	});
+   printProduktai(filteredProducts);
 });
 
 $("#FilterByPrice").click(function () {
-	produktai = produktai.filter(function (prod) {
-		return prod.kaina >= 2;
+	let filteredProducts = produktai.filter(function (prod) {
+		return prod.kaina >= 2; // kaina turi buti didesne uz 2
 	});
-	printProduktai(produktai);
+	printProduktai(filteredProducts);
+});
+
+$("#SearchByName").click(function () {
+	let search_phrase = $("#search").val();
+	let filteredProducts = produktai.filter(function (prod) {
+		// return prod.pavadinimas.toLowerCase() == search_phrase.toLowerCase(); // Filtruojam pagal pavadinima
+		return prod.pavadinimas.toLowerCase().indexOf(search_phrase) > -1;
+	});
+   printProduktai(filteredProducts);
 });
 
 function sortByName(array){

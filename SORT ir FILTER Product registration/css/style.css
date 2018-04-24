@@ -33,7 +33,9 @@ body{
 }
 
 .tarpelis{
-	height:15px;
+	border:1px solid #ddd;
+	margin-top:7px;
+	margin-bottom:7px;
 }
 
 
