@@ -17,40 +17,19 @@
 <body>
 
 <section id="firstSection">
-    
     <div class="container">
-
-        <div class="row">
-            <div class="col-12">
-                <div class="alert alert-success alert-dismissible fade mt-3" role="alert" id="reg_ok">
-                    <strong>Valio!</strong> Registracija iviko.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade mt-3" role="alert" id="reg_error">
-                    <strong>Wops!</strong> Kazkas negerai.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
         <div class="row justify-content-center">
             <div class="col-6 lentele ">
                 <!-- <div class="col-4"> -->
-                <form id="myForm" >
+                <form id="myForm">
                     <h1>Produktų registracija</h1>
                     <div class="form-group">
                         <label for="pavadinimas">Pavadinimas</label>
                         
                         <div class="input-group mb-9">                            
-                            <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">                            
+                            <input type="text" name="pavadinimas" id="pavadinimas" class="form-control" placeholder="Pavadinimas">
+                            
                         </div>
-                        <div class="invalid-feedback" id="pavadinimas-validation-error">
-                                Kaina error
-                            </div>
                     </div>
                     
                     
@@ -58,14 +37,10 @@
                     <div class="form-group">
                         <label for="kaina">Kaina</label>                        
                         <div class="input-group">                            
-                            <input type="number" name="kaina" id="kaina" class="form-control" placeholder="Kaina"  min="1" max="1000">
+                            <input type="text" name="kaina" id="kaina" class="form-control" placeholder="Kaina">
                             
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon1">€</span>
-                            </div>
-
-                            <div class="invalid-feedback" id="kaina-validation-error">
-                                Kaina error
                             </div>
                         </div>  
                     </div>
@@ -73,38 +48,20 @@
                     <div class="form-group">
                         <label for="kiekis">Kiekis</label>
                         <input type="text" name="kiekis" id="kiekis" class="form-control" placeholder="Kiekis">
-                        <div class="invalid-feedback" id="kiekis-validation-error">
-                            Number error
-                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="miestas">Miestas</label>
-                        <input type="text" name="miestas" id="miestas" class="form-control" placeholder="Miestas" required>
-                        <div class="invalid-feedback" id="city-validation-error">
-                            Prašome parašyti taisyklingą miestą.
-                        </div>
-                        
-                    </div>
-
-                    <div class="form-group">
-                        <label for="miestas">El paštas</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Email" required>
-                        <div class="invalid-feedback" id="email-validation-error">
-                            
-                        </div>                        
+                        <input type="text" name="miestas" id="miestas" class="form-control" placeholder="Miestas">
                     </div>
                     
 
                     <div class="mygtukai">
-                        <button class="btn btn-success" id="sukurti"  type="button" onclick="add()" >Sukurti <i class="far fa-check-circle"></i></button>
+                        <button class="btn btn-success" id="sukurti" onclick="add()" type="button">Sukurti <i class="far fa-check-circle"></i></button>
                         <button class="btn btn-alert" id="sukurti" onclick="clearSavedData()" type="button">Clear saved data <i class="fas fa-trash-alt"></i></button>
                         <button class="btn btn-link float-right" onclick="resetForm()" >Atšaukti</button>
                     </div>
                 </form>
-
-
-
                 <!-- </div> -->
             </div>
         </div>
@@ -118,14 +75,13 @@
 </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-
-
 </body>
 
 </html>
