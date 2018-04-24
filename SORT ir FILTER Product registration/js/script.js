@@ -88,13 +88,13 @@ function clearSavedData(){
 }
 
 $("#SortByName").click(function () {
-	let filteredProducts = sortByName(produktai);
-	printProduktai(filteredProducts);
+	let sortedProducts = sortByName(produktai);
+	printProduktai(sortedProducts);
 });
 
 $("#SortByPrice").click(function () {
-	let filteredProducts = sortByPrice(produktai);
-	printProduktai(filteredProducts);
+	let sortedProducts = sortByPrice(produktai);
+	printProduktai(sortedProducts);
 });
 
 $("#FilterByCity").click(function () {
@@ -120,6 +120,28 @@ $("#SearchByName").click(function () {
    printProduktai(filteredProducts);
 });
 
+$("#ShowTopProduct_withSort").click(function () {
+	let sortedProducts = sortByPrice(produktai);
+	let pigiausia_preke = sortedProducts[0];
+	let brangiausia_preke = sortedProducts[sortedProducts.length-1];
+
+	let topProd = brangiausia_preke;
+
+	printProduct(topProd);
+});
+
+$("#ShowTopProduct").click(function () {
+	
+	let brangiausia_preke = produktai[0];
+	for(let i = 0; i< produktai.length; i++){
+		if(produktai[i].kaina > brangiausia_preke.kaina){
+			brangiausia_preke = produktai[i];
+		}
+	}
+	printProduct(brangiausia_preke);
+});
+
+
 function sortByName(array){
 	array.sort(
 		function(a, b) {
@@ -136,4 +158,21 @@ function sortByPrice(array){
 		}
 	);
 	return array;
+}
+
+function printProduct(prod){
+	var h = "";
+	h = h + "<table class='table table-striped' id=myTable>";
+	h = h + "<tr><thead class='thead-dark'><th> Pavadinimas </th> <th>Kiekis</th> <th>Kaina</th> <th>Miestas</th> <th>Veiksmas</th></thead></tr>"
+	
+		
+		h = h + "<tr><td>" + prod.pavadinimas + "</td>"
+		 + "<td>" + prod.kiekis + "</td>"
+		 + "<td>" + prod.kaina + "&euro;" + "</td>"
+		 + "<td>" + prod.miestas + "</td>"
+		 + "<td>" +"<button class='btn btn-link'></button>" + "</td></tr>";
+		
+	
+	h = h + "</table>";
+	document.getElementById("spausdinti").innerHTML = h;
 }
