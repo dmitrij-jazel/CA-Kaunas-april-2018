@@ -4,6 +4,13 @@ $("#btn_search").click(function () {
 	let brand_text = $("#txt_brand").val();
 	let model_text = $("#txt_model").val();
 
+	let part_of_string = "";
+	if(brand_text && model_text){
+		part_of_string = brand_text.toLowerCase() + " " + model_text.toLowerCase();
+	}else{
+		part_of_string = brand_text.toLowerCase() + model_text.toLowerCase();
+	}
+
 	let hp_from_text = $("#txt_hp_from").val();
 	let hp_to_text = $("#txt_hp_to").val();
 
@@ -13,9 +20,13 @@ $("#btn_search").click(function () {
 	// logic - atfiltruoti reikiamus duomenys
 	let filtered_cars = CARS.filter(function (car) {
 		let full_string = car.brand.toLowerCase() + " " + car.model.toLowerCase();
-		let part_of_string = brand_text.toLowerCase() + " " + model_text.toLowerCase();
-
-		return full_string.indexOf(part_of_string) > -1; // paliginimo funkcija - Filtruojam pagal branda
+		
+		console.log("ieskom:'"+part_of_string+"'");
+		console.log("sitame zodije: '"+full_string+"'");
+		let found = full_string.indexOf(part_of_string) > -1;
+		console.log("rasta? "+found);
+		console.log("------------------------------------");
+		return found; // paliginimo funkcija - Filtruojam pagal branda
 	});
 
 	let hp_min = 0;
@@ -104,7 +115,9 @@ function getMostPowerfulCar(array){
 //next function
 function printCar(car){
 	let h = "";
-		
+	if(car == undefined || car == null){
+		h = h + "Jokiu duomenu nerasta!"
+	}else{
 		h = h + "<div class='row'>";
 		h = h + "<div class='col-12'>";
 		h = h + "<h5>"+car.brand+" "+car.model+"</h5>";
@@ -120,6 +133,7 @@ function printCar(car){
 		
 		h = h + "</div>"; // uzdarom col-12
 		h = h + "</div>"; // uzdarom row	
+	}
 
 	$("#topCar").html(h);
 }
