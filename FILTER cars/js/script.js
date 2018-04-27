@@ -60,3 +60,24 @@ function getTopCar(array){
 	}
 	return topCar;
 }
+
+
+
+
+
+
+$("#btn_ajax").click(function(){
+	$.ajax({
+		url: "http://localhost:3000",
+		type: 'GET',  
+		success:function(data) {
+		  alert("Success veikia!");
+		}
+	}).done(function(data) {
+		alert("Done veikia ["+data+"]");
+		$("ajax_result").html(data);
+	});
+	  
+	
+
+});
